@@ -2,8 +2,8 @@ from read_sheet import *
 import selenium_test_module
 import driver_global
 
-class runUnitTest_class(driver_global.SeleniumTest):
 
+class runUnitTest_class(driver_global.SeleniumTest):
     """loop through the list"""
     for i in range(len(data)):
         if data[i]['Run'].lower() == 'y':

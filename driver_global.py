@@ -4,20 +4,21 @@ from datetime import datetime
 
 now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
+
 class SeleniumTest():
     @classmethod
     def setUpClass(cls):
         """Use Chromedriver from google repo and not pip. It's newer ad wont break!! Current ver 2.34"""
         options = Options()
         options.add_argument("--start-maximized")
-        cls.driver = webdriver.Chrome('/home/danw32/Documents/chromedriver',chrome_options=options)
+        cls.driver = webdriver.Chrome('/home/danw32/Documents/chromedriver', chrome_options=options)
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
 
-    #TODO: this needs to save in different directories for each line of excel sheet/every pass. It just overwrites the same png atm.
+    # TODO: this needs to save in different directories for each line of excel sheet/every pass. It just overwrites the same png atm.
     @classmethod
     def take_screenshot_now(cls, filename):
         try:
