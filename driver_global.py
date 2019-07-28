@@ -11,6 +11,7 @@ class SeleniumTest():
         """Use Chromedriver from google repo and not pip. It's newer ad wont break!! Current ver 2.34"""
         options = Options()
         options.add_argument("--start-maximized")
+        """Change the path below to where your downloaded chromedriver file resides"""
         cls.driver = webdriver.Chrome('/home/danw32/Documents/chromedriver', chrome_options=options)
 
     @classmethod
